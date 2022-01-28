@@ -24,9 +24,7 @@ cat.complain();
 //Question 2:
 
 const heading = document.querySelector("h3");
-heading.innerHTML =
-    "Updated heading"
-;
+heading.innerHTML = "Updated heading";
 
 //Question 3:
 
@@ -58,37 +56,38 @@ console.log(resultsContainer);
 
 //Question 7
 
-function findCat (list) {
+function findCat(list) {
     for (let i = 0; i < list.length; i++) {
         console.log(list[i].name);
     }
 }
+
 findCat(cats);
 
 //Question 8
 
-function createCats (cats){
+function createCats(cats) {
 
     let html = "";
 
     for (let i = 0; i < cats.length; i++) {
 
-   let theCatAge = "";
+        let theCatAge = "";
 
-   if (cats[i].age) {
-       theCatAge = cats[i].age;
-   } else {
-       theCatAge = "unknown age";
-   }
+        if (cats[i].age) {
+            theCatAge = cats[i].age;
+        } else {
+            theCatAge = "unknown age";
+        }
 
 
-    html += `
+        html += `
     <div> 
     <h5>The cats name is: ${cats[i].name}</h5>
     <p>The age og the: ${theCatAge}</p>
     </div>`;
 
-}
+    }
 
     return html;
 }
