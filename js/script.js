@@ -104,7 +104,7 @@ function createCats(cats) {
     return html;
 }
 
-//console.log(finalHtml)
+
 catContainer.innerHTML = createCats(cats);
 
 
