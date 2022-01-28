@@ -45,26 +45,38 @@ for (let i = 0; i < paragraphs.length; i++) {
 
 console.log(paragraphs);
 
-//Question 6
+//Question 6:
 
 const resultsContainer = document.querySelector(".results");
 
 resultsContainer.innerHTML = `
-<p style="background: yellow"> New paragraph</p>
+    <p> New paragraph</p>
 `;
+
+resultsContainer.style.backgroundColor = "yellow";
 console.log(resultsContainer);
 
 //Question 7
 
-function findCat(list) {
+/*function findCat(list) {
     for (let i = 0; i < list.length; i++) {
         console.log(list[i].name);
+    }
+}*/
+
+//findCat(cats);
+
+function findCat(list) {
+    for (item of list) {
+        console.log(item.name);
     }
 }
 
 findCat(cats);
 
 //Question 8
+
+const catContainer = document.querySelector(".cat-container");
 
 function createCats(cats) {
 
@@ -82,9 +94,9 @@ function createCats(cats) {
 
 
         html += `
-    <div> 
+    <div>
     <h5>The cats name is: ${cats[i].name}</h5>
-    <p>The age og the: ${theCatAge}</p>
+    <p>The age of the: ${theCatAge}</p>
     </div>`;
 
     }
@@ -92,10 +104,7 @@ function createCats(cats) {
     return html;
 }
 
-
-const finalHtml = createCats(cats);
-console.log(finalHtml)
-const catContainer = document.querySelector(".cat-container")
-catContainer.innerHTML = finalHtml;
+//console.log(finalHtml)
+catContainer.innerHTML = createCats(cats);
 
 
